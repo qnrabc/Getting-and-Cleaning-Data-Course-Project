@@ -1,21 +1,37 @@
 # Code book
 
-The codebook sumarises the data fields in the file **tidy.txt** which is produced as an output of **run_analysis.R**. The first two columns of the dataset contain identifiers. The remaining columns contain measurements. 
+### Data transformations
+
+In what follows we describe transformations performed by **run_analysis.R** to obtain the tidy dataset from the original dataset.
+
+- Load the original data from [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
+- Merge the training and the test sets to create one data set. The data for measurements, activities and subjects is stored in variables respectively *x*, *y* and *s*.
+- Load activity labels and feature names into variables *activity_labels* and *features*.
+- Extract only the measurements on the mean and standard deviation for each measurement. Do it by searching for the pattern "std|mean" in each feature name.
+- Merge data frames *s*, *y* and *x* and set appropriate column names (described in the **Data fields** section below).
+- Create a second, independent data set with the average of each measurement for each activity and each subject.
+- Write the dataset to the **tidy.txt** file.
+
+The tidy dataset contains mean values of measurements (listed above) grouped by **subject** and **activity**.
+
+## Data fields
+
+Below we sumarise the data fields in the file **tidy.txt** which is produced as an output of **run_analysis.R**. The first two columns of the dataset contain identifiers. The remaining columns contain measurements. 
 
 ### Identifiers
 
 - subject - contains the id of a subject
-- activity - contains the name of an activity performed by the subject. Activity field can contain one of the following values:
-  1. WALKING
-  2. WALKING_UPSTAIRS
-  3. WALKING_DOWNSTAIRS
-  4. SITTING
-  5. STANDING
-  6. LAYING
+- activity - contains the name of an activity performed by the subject. Can contain one of the following values:
+  + WALKING
+  + WALKING_UPSTAIRS
+  + WALKING_DOWNSTAIRS
+  + SITTING
+  + STANDING
+  + LAYING
 
 ### Measurements
 
-Each measurement contains 
+The following measurements are available
 
 - "tBodyAccMean-X"
 - "tBodyAccMean-Y"
@@ -96,6 +112,3 @@ Each measurement contains
 - "fBodyBodyGyroJerkMagMean"
 - "fBodyBodyGyroJerkMagStd"
 - "fBodyBodyGyroJerkMagMeanFreq"
-
-### Data transformations
-
