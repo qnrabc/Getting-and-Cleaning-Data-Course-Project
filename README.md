@@ -3,7 +3,7 @@
 This is the course project for the Getting and Cleaning Data Coursera course. The repo includes the following:
 
 - **run_analysis.R** R script that cleans up the data. The script does the following:
-  - Loads the original data from (UCI HAR Dataset)[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip].
+  - Loads the original data from [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
   - Merges the training and the test sets to create one data set.
   - Extracts only the measurements on the mean and standard deviation for each measurement.
   - Relabels the dataset with descriptive variable names.
