@@ -29,7 +29,7 @@ Below we sumarise the data fields in the file **tidy.txt** which is produced as 
 
 ### Measurements
 
-The following measurements are available
+The following measurements are available. The meaning of each name is explained in the original dataset codebook [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
 
 - "tBodyAccMean-X"
 - "tBodyAccMean-Y"
