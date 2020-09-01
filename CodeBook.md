@@ -7,9 +7,9 @@ In what follows we describe transformations performed by **run_analysis.R** to o
 - Load the original data from [UCI HAR Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). 
 - Merge the training and the test sets to create one data set. The data for measurements, activities and subjects is stored in variables respectively *x*, *y* and *s*.
 - Load activity labels and feature names into variables *activity_labels* and *features*.
-- Extract only the measurements on the mean and standard deviation for each measurement. Do it by searching for the pattern "std|mean" in *feature*
-- Merge data frames *s*, *y* and *x* (by using cbind function) and set appropriate column names (described in the **Data fields** section below).
-- Create a second, independent data set with the average of each measurement for each activity and each subject. In order to do so first melt the data by id = c("subject", "activity") then dcast on subject + activity ~ variable.
+- Extract only the measurements on the mean and standard deviation for each measurement. Do it by searching for the pattern *std|mean* in *feature*
+- Merge data frames *s*, *y* and *x* (using cbind function) and set appropriate column names (described in the **Data fields** section below).
+- Create a second data set *tidy* with the average of each measurement for each activity and each subject. In order to do so first melt the data by id = c("subject", "activity") then dcast on subject + activity ~ variable.
 - Write the dataset to the **tidy.txt** file.
 
 The tidy dataset contains mean values of measurements (listed above) grouped by **subject** and **activity**.
