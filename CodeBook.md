@@ -12,8 +12,6 @@ In what follows we describe transformations performed by **run_analysis.R** to o
 - Create a second data set *tidy* with the average of each measurement for each activity and each subject. In order to do so first melt the data by id = c("subject", "activity") then dcast on subject + activity ~ variable.
 - Write the dataset to the **tidy.txt** file.
 
-The tidy dataset contains mean values of measurements (listed above) grouped by **subject** and **activity**.
-
 ## Data fields
 
 Below we sumarise the data fields in the file **tidy.txt** which is produced as an output of **run_analysis.R**. The first two columns of the dataset contain identifiers. The remaining columns contain measurements. 
